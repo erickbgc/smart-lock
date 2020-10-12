@@ -1,0 +1,7 @@
+{
+  "name": "smart-lock",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
