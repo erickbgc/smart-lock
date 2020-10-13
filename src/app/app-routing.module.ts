@@ -8,9 +8,27 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'places',
     pathMatch: 'full'
   },
+  {
+    path: 'places',
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('./places/places.module').then( m => m.PlacesPageModule)
+      },
+      {
+        path: ':placeId',
+        loadChildren: () => import('./places/places-details/places-details.module').then(m => m.PlacesDetailsPageModule)
+      },
+    ]
+  },
+  {
+    path: 'new-place',
+    loadChildren: () => import('./places/place-add/place-add.module').then(m => m.PlaceAddPageModule)
+  }
+
 ];
 
 @NgModule({
