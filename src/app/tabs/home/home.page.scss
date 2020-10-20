@@ -1,0 +1,15 @@
+.button-container {
+    margin: 150px 0px 0px;
+    .openDoorButton {
+        display: flex;
+        justify-content: center;
+        #open-button-svg {
+            width: 250px;
+            height: 250px;
+            transition: 0.3 ease-in;
+        }
+        #open-button-svg:active {
+            transform: translateY(-1px);
+        }
+    }
+}
