@@ -74,6 +74,12 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+  /** Special Colors **/
+  --blue-divisor: #C150DC;
+  --netflix-red: #EA4335;
+  --forms-gray: #C5C5C5;
+  --login-container: rgba(165,84,212,0.2);
+  --forms-placeholder: black;
 }
 
 @media (prefers-color-scheme: dark) {
