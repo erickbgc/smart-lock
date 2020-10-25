@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { SignupModalComponent } from '../signup-modal/signup-modal.component';
 
 @Component({
   selector: 'app-login',
@@ -7,7 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
-  constructor() { }
+  constructor(private modalController: ModalController) { }
+
+  async openSignUpModal() {
+    const modal = await this.modalController.create({
+      component: SignupModalComponent,
+    })
+
+    await modal.present();
+
+  }
 
   ngOnInit() {
   }

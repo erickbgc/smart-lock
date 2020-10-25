@@ -2,6 +2,7 @@
     background-color: var(--login-container);
     height: 100%;
     font-family: 'Lato', sans-serif;
+    padding-top: 5vh;
     .header_section {
         display: flex;
         justify-content: center;
@@ -70,6 +71,19 @@
         .google_btn, .facebook-btn {
             display: block;
             width: 70px;
+        }
+    }
+    #sign-up-btn {
+        ::ng-deep {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            #sign-up-button {
+                --padding-top: 20px;
+                --padding-bottom: 20px;
+                --border-radius: 5px;
+                --background: var(--netflix-blue);
+            }
         }
     }
 }

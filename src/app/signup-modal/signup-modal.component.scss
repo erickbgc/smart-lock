@@ -1,0 +1,41 @@
+.signup_container {
+    background-color: var(--login-container);
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+    .header_section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .signup_form {
+        #login-input {
+            display: block;
+            background-color: var(--forms-gray);
+            border-radius: 5px;
+            color: #000000;
+            ::ng-deep {
+                &::placeholder {
+                    color: var(--forms-placeholder);
+                    font-weight: 500;
+                }
+                &:focus {
+                    color: #000000;
+                }
+            }
+        }
+    }
+    #sign-up-btn {
+        ::ng-deep {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            #sign-up-button {
+                --padding-top: 20px;
+                --padding-bottom: 20px;
+                --border-radius: 5px;
+                --background: var(--netflix-blue);
+            }
+        }
+    }
+}

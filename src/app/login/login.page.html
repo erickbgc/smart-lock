@@ -1,4 +1,4 @@
-<ion-content class="ion-padding">
+<ion-content class="ion-no-padding">
   <ion-grid class="ion-padding login_container">
 
     <!-- Header -->
@@ -6,19 +6,26 @@
       <ion-col>
         <div class="header_section">
           <!-- Firebase Icon -->
-          <svg width="174" height="174" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" id="firebase_logo">
+          <svg width="174" height="174" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"
+            id="firebase_logo">
             <g clip-path="url(#clip0)">
-            <path d="M39.24 23.116L32.834 29.076L26.89 17.086L29.966 10.19C30.766 8.79 32.014 8.806 32.794 10.19L39.24 23.116Z" fill="#FFA000"/>
-            <path d="M26.89 17.086L32.834 29.076L8.894 51.346L26.89 17.086Z" fill="#F57F17"/>
-            <path d="M46.246 14.006C47.39 12.906 48.574 13.282 48.876 14.84L55.108 51.05L34.452 63.45C33.732 63.85 31.812 64.022 31.812 64.022C31.812 64.022 30.064 63.814 29.398 63.422L8.894 51.346L46.246 14.006Z" fill="#FFCA28"/>
-            <path d="M26.89 17.086L8.896 51.346L16.91 1.27599C17.206 -0.284009 18.094 -0.434009 18.886 0.941991L26.89 17.086Z" fill="#FFA000"/>
+              <path
+                d="M39.24 23.116L32.834 29.076L26.89 17.086L29.966 10.19C30.766 8.79 32.014 8.806 32.794 10.19L39.24 23.116Z"
+                fill="#FFA000" />
+              <path d="M26.89 17.086L32.834 29.076L8.894 51.346L26.89 17.086Z" fill="#F57F17" />
+              <path
+                d="M46.246 14.006C47.39 12.906 48.574 13.282 48.876 14.84L55.108 51.05L34.452 63.45C33.732 63.85 31.812 64.022 31.812 64.022C31.812 64.022 30.064 63.814 29.398 63.422L8.894 51.346L46.246 14.006Z"
+                fill="#FFCA28" />
+              <path
+                d="M26.89 17.086L8.896 51.346L16.91 1.27599C17.206 -0.284009 18.094 -0.434009 18.886 0.941991L26.89 17.086Z"
+                fill="#FFA000" />
             </g>
             <defs>
-            <clipPath id="clip0">
-            <rect width="64" height="64" fill="white"/>
-            </clipPath>
+              <clipPath id="clip0">
+                <rect width="64" height="64" fill="white" />
+              </clipPath>
             </defs>
-            </svg>            
+          </svg>
         </div>
       </ion-col>
     </ion-row>
@@ -28,7 +35,7 @@
       <ion-col>
         <form>
           <div class="ion-padding signin_form">
-            <ion-input placeholder="Username" class="ion-padding" id="login-input" type="email"></ion-input>
+            <ion-input placeholder="Email" class="ion-padding" id="login-input" type="email"></ion-input>
             <br>
             <ion-input placeholder="Password" class="ion-padding" id="login-input" type="password"></ion-input>
             <br>
@@ -52,10 +59,10 @@
     <!-- Log in with Section -->
     <ion-row>
       <ion-col class="login_with_header">
-        <h4 class="ion-text-center">Or Login with</h4>
+        <h4 class="ion-text-center">Login with</h4>
       </ion-col>
     </ion-row>
-      <!-- Or Login Buttons -->
+    <!-- Or Login Buttons -->
     <ion-row>
       <ion-col>
         <div class="or_login_with">
@@ -86,7 +93,8 @@
               </defs>
               <g id="Google-Button" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
                 <g id="9-PATCH" sketch:type="MSArtboardGroup" transform="translate(-608.000000, -160.000000)"></g>
-                <g id="btn_google_light_normal" sketch:type="MSArtboardGroup" transform="translate(-1.000000, -1.000000)">
+                <g id="btn_google_light_normal" sketch:type="MSArtboardGroup"
+                  transform="translate(-1.000000, -1.000000)">
                   <g id="button" sketch:type="MSLayerGroup" transform="translate(4.000000, 4.000000)"
                     filter="url(#filter-1)">
                     <g id="button-bg">
@@ -120,11 +128,27 @@
           <div id="login_divider_section3"></div>
           <!-- Facebook Button -->
           <div class="facebook_btn">
-            <img src="../../assets/icon/facebook-signin-btn.png" alt="facebook button" width="40" height="40"/>
+            <img src="../../assets/icon/facebook-signin-btn.png" alt="facebook button" width="40" height="40" />
           </div>
         </div>
       </ion-col>
     </ion-row>
+
+    <!-- Sign Up Modal form -->
+    <ion-row>
+      <ion-col class="login_with_header ion-margin-vertical">
+        <h4 class="ion-text-center">Or sign up instead</h4>
+
+        <div id="sign-up-btn">
+          <ion-button expand="full" shape="round" size="default" id="sign-up-button" type="submit" (click)="openSignUpModal()">
+            <ion-text class="ion-text-uppercase">SIGN UP</ion-text>
+          </ion-button>
+        </div>
+
+      </ion-col>
+    </ion-row>
+
+
 
   </ion-grid>
 </ion-content>
