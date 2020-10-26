@@ -3,10 +3,8 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { ModalController } from '@ionic/angular';
 import { SignupModalComponent } from '../signup-modal/signup-modal.component';
 
-// Firebase configuration
-import * as firebase from 'firebase';
-import { AngularFireAuth } from "@angular/fire/auth";
-import { Router } from '@angular/router';
+// Auth Firebase Service
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -20,8 +18,7 @@ export class LoginPage implements OnInit {
   constructor(
     private modalController: ModalController,
     private formBuilder: FormBuilder,
-    private _auth: AngularFireAuth,
-    private router: Router,
+    private _fireauth: AuthService,
   ) {
     this.loginFields = this.formBuilder.group({
       email: ['', Validators.required],
@@ -38,22 +35,12 @@ export class LoginPage implements OnInit {
 
   }
 
+  // When User Log in
+  onSubmit = () => {
+    this._fireauth.onLogin(this.loginFields.value.email, this.loginFields.value.password);
+  }
+
   ngOnInit() {
   }
-
-  onLogin() {
-    this._auth.signInWithEmailAndPassword(this.loginFields.value.email, this.loginFields.value.password)
-      .then((user) => {
-        if (firebase.auth().currentUser.emailVerified) {
-          console.log('Access has been granted', user);
-          // this.authGuardService.authInfo.authenticated = true;
-          this.router.navigate(['/']);
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      })
-  }
-
 
 }
