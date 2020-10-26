@@ -45,19 +45,21 @@
         <form>
           <div class="ion-padding signup_form">
             <!-- Sign up Inputs -->
-            <ion-input [formControl]="signUpFields" formControlName="firstName" placeholder="First Name" class="ion-padding" id="login-input" type="text" required></ion-input>
-            <br>
-            <ion-input [formControl]="signUpFields" formControlName="lastName" placeholder="Last Name" class="ion-padding" id="login-input" type="text" required></ion-input>
-            <br>
-            <ion-input [formControl]="signUpFields" formControlName="username" placeholder="Username" class="ion-padding" id="login-input" type="text" required></ion-input>
-            <br>
-            <ion-input [formControl]="signUpFields" formControlName="email" placeholder="Email" class="ion-padding" id="login-input" type="email" required></ion-input>
-            <br>
-            <ion-input [formControl]="signUpFields" formControlName="password" placeholder="Password" class="ion-padding" id="login-input" type="password" required></ion-input>
-            <br>
+            <div [formGroup]="signupFields">
+              <ion-input formControlName="firstName" placeholder="First Name" class="ion-padding" id="login-input" type="text" required></ion-input>
+              <br>
+              <ion-input formControlName="lastName" placeholder="Last Name" class="ion-padding" id="login-input" type="text" required></ion-input>
+              <br>
+              <ion-input formControlName="username" placeholder="Username" class="ion-padding" id="login-input" type="text" required></ion-input>
+              <br>
+              <ion-input formControlName="email" placeholder="Email" class="ion-padding" id="login-input" type="email" required></ion-input>
+              <br>
+              <ion-input formControlName="password" placeholder="Password" class="ion-padding" id="login-input" type="password" required></ion-input>
+              <br>
+            </div>
             <!-- Sign up Button -->
             <div id="sign-up-btn">
-              <ion-button [disabled]="signUpFields.invalid" (click)="onRegister()" expand="block" shape="round" size="default" id="sign-up-button" type="submit">
+              <ion-button [disabled]="signupFields.invalid" (click)="onRegister()" expand="block" shape="round" size="default" id="sign-up-button" type="submit">
                 <ion-text class="ion-text-uppercase">Register</ion-text>
               </ion-button>
             </div>

@@ -35,13 +35,15 @@
       <ion-col>
         <form>
           <div class="ion-padding signin_form">
-            <ion-input placeholder="Email" class="ion-padding" id="login-input" type="email"></ion-input>
-            <br>
-            <ion-input placeholder="Password" class="ion-padding" id="login-input" type="password"></ion-input>
-            <br>
+            <div [formGroup]="loginFields">
+              <ion-input formControlName="email" placeholder="Email" class="ion-padding" id="login-input" type="email" required autofocus="on"></ion-input>
+              <br>
+              <ion-input formControlName="password" placeholder="Password" class="ion-padding" id="login-input" type="password" required></ion-input>
+              <br>
+            </div>
             <!-- Sign in Button -->
             <div id="sign-in-btn">
-              <ion-button expand="block" shape="round" size="default" id="sign-in-button" type="submit">
+              <ion-button [disabled]="loginFields.invalid" (click)="onLogin()" expand="block" shape="round" size="default" id="sign-in-button" type="submit">
                 <ion-icon name="log-in-outline" slot="start"></ion-icon>
                 <ion-text>SIGN IN</ion-text>
               </ion-button>
