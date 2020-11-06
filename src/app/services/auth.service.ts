@@ -19,7 +19,7 @@ export class AuthService {
         if (firebase.auth().currentUser.emailVerified) {
           console.log('Access has been granted', user);
           // this.authGuardService.authInfo.authenticated = true;
-          this.router.navigate(['/']);
+          this.router.navigate(['/app/home']);
         }
       })
       .catch((err) => {
@@ -31,7 +31,7 @@ export class AuthService {
     this._auth.createUserWithEmailAndPassword(email, password)
       .then(() => {
         firebase.auth().currentUser.sendEmailVerification();
-        this.router.navigate(['/']);
+        this.router.navigate(['/app/home']);
       })
       .catch((err) => {
         console.log(err);

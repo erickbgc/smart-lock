@@ -12,8 +12,7 @@
 
         <div class="openDoorButton">
           <!-- SVG Press Button Icon -->
-          <ion-icon src="/assets/icon/open-door-button.svg" id="open-button-svg"></ion-icon>
-
+          <ion-icon (click)="actionDoor({lock:doorValue})" src="/assets/icon/open-door-button.svg" id="open-button-svg"></ion-icon>
         </div>
       </ion-col>
     </ion-row>
@@ -31,5 +30,5 @@
       <ion-icon name="add-sharp"></ion-icon>
     </ion-fab-button>
   </ion-fab>
-
+  
 </ion-content>

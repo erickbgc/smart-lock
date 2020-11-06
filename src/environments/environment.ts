@@ -1,7 +1,4 @@
-// This file can be replaced during build by using the `fileReplacements` array.
-// `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
-// The list of file replacements can be found in `angular.json`.
-
+// environment configuration that contains FirebaseConfig
 export const environment = {
   production: false,
   firebaseConfig : {
@@ -14,6 +11,26 @@ export const environment = {
     appId: "1:283277017331:web:034c8e581fdcc6c2bcb786"
   }
 };
+
+// Config to Convert DataSnapshot from Firebase to an Array
+export const snapshotToArray = snapshot => {
+  let returnArray = [];
+
+  snapshot.forEach(element => {
+    //al principio item no posee ningun valor, estos son pasados atraves de addItem(item)
+    console.log("My elements: ", element);
+    let item = element.val(); //obtiene el valor del nodo
+    item = parseInt(item);
+    console.log('Dentro de snapshot!! ',item);
+    //item.key = element.key; //obtiene la llave del nodo
+    //console.log('Dentro de snapshot, la clave!! ',item.key);
+    console.log("Codigooo: ",item);
+    returnArray.push(item);
+    console.log('Returning array: ',returnArray);
+  })
+
+  return returnArray;
+}
 
 /*
  * For easier debugging in development mode, you can import the following file

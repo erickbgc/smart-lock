@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
-
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+
+// Firebase config
+import * as firebase from 'firebase';
+import { environment } from "../environments/environment";
 
 @Component({
   selector: 'app-root',
@@ -16,6 +19,7 @@ export class AppComponent {
     private statusBar: StatusBar
   ) {
     this.initializeApp();
+    firebase.initializeApp(environment.firebaseConfig);
   }
 
   initializeApp() {
