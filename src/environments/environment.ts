@@ -2,13 +2,13 @@
 export const environment = {
   production: false,
   firebaseConfig : {
-    apiKey: "AIzaSyCOh-f2uo4uiPlgU87yS5j4gpgna5mgtVE",
-    authDomain: "auth-tutorial-5a604.firebaseapp.com",
-    databaseURL: "https://auth-tutorial-5a604.firebaseio.com",
-    projectId: "auth-tutorial-5a604",
-    storageBucket: "auth-tutorial-5a604.appspot.com",
-    messagingSenderId: "283277017331",
-    appId: "1:283277017331:web:034c8e581fdcc6c2bcb786"
+    apiKey: "AIzaSyC1LNzxUOAc88b-JwOzEOE_7xBUXuwtUyc",
+    authDomain: "ionic-iot-398f4.firebaseapp.com",
+    databaseURL: "https://ionic-iot-398f4.firebaseio.com",
+    projectId: "ionic-iot-398f4",
+    storageBucket: "ionic-iot-398f4.appspot.com",
+    messagingSenderId: "365512923736",
+    appId: "1:365512923736:web:99f320bf669e380a2f082d"
   }
 };
 
